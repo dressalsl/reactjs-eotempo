@@ -24,11 +24,11 @@ const App = () => {
 
     return (
         <div className='main-container'>
-            <img className={styles.image} src={logo} alt="Logo E o tempo?"/>
+            <img className={styles.image} src={logo} alt="Logo Weather Temperature?"/>
             <input
                 type="text"
                 className="search"
-                placeholder="Pesquisar"
+                placeholder="Search City"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyPress={search}
@@ -46,6 +46,20 @@ const App = () => {
                     <div>
                         <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
                         <p>{weather.weather[0].description}</p>
+                    </div>
+                    <div>
+                        <h4>
+                            Thermal sensation: {Math.round(weather.main.feels_like)}<sup>&deg;C</sup>
+                        </h4>
+                        <h4>
+                            Maximum temperature: {Math.round(weather.main.temp_max)}<sup>&deg;C</sup>
+                        </h4>
+                        <h4>
+                            Minimum temperature: {Math.round(weather.main.temp_min)}<sup>&deg;C</sup>
+                        </h4>
+                        <h4>
+                           Humidity: {weather.main.humidity} %
+                        </h4>
                     </div>
                 </div>
             )}

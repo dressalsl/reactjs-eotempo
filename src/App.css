@@ -36,7 +36,7 @@ html, body, #root {
     flex-direction: column;
     padding: 40px 8%;
     border-radius: 20px;
-    background: rgba(250, 250, 250, 0.85);
+    background: #d6d6d6;
     box-shadow: 10px 10px 5px 0px rgba(15, 15, 15, 0.404);
 }
 
@@ -44,6 +44,8 @@ p {
     margin-top: 10px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    justify-content: center;
+    text-align: center;
 }
 
 .city-temp {
@@ -74,6 +76,9 @@ p {
     margin-top: 10px;
     width: 100px;
     height: 100px;
+    display: flex;
+    text-align: center;
+    
 }
 
 .info {
@@ -81,6 +86,7 @@ p {
     flex-direction: column;
     align-items: center;
 }
+
 
 @media only screen and (max-width: 600px) {
     .search {
@@ -90,4 +96,5 @@ p {
     .city {
         padding: 40px 20%;
     }
+   
 }
